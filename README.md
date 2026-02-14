@@ -11,4 +11,4 @@ npm start
 ## Shortcuts
 - `Cmd+T` - New tab
 - `Cmd+W` - Close tab
-- `Cmd+K` - Clear terminal
+- `Ctrl+U` - Clear line
