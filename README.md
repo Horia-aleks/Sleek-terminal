@@ -4,7 +4,9 @@ Modern terminal app for macOS built with Electron.
 
 ## Setup
 ```bash
+cd sleek-terminal
 npm install
+npm run build (optional)
 npm start
 ```
 
