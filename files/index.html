@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleek Terminal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="node_modules/xterm/css/xterm.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="window-controls">
+        <div class="control-button close"></div>
+        <div class="control-button minimize"></div>
+        <div class="control-button maximize"></div>
+      </div>
+      <div class="title">Sleek Terminal</div>
+      <div class="settings">
+        <button class="icon-btn" id="new-tab" title="New Tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" id="split-pane" title="Split Pane">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="12" y1="3" x2="12" y2="21"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" id="settings" title="Settings">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m8.66-15l-5.2 3m-5.2 6l-5.2 3m17.32 0l-5.2-3m-5.2-6l-5.2-3"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab bar -->
+    <div class="tab-bar">
+      <div class="tab active" data-tab="1">
+        <span class="tab-title">zsh</span>
+        <button class="tab-close">×</button>
+      </div>
+      <button class="tab-new">+</button>
+    </div>
+
+    <!-- Terminal container -->
+    <div class="terminal-wrapper">
+      <div id="terminal" class="terminal-container"></div>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="status-left">
+        <span class="status-item" id="cwd">~</span>
+        <span class="status-item" id="shell">zsh</span>
+      </div>
+      <div class="status-right">
+        <span class="status-item" id="dimensions">80×24</span>
+        <span class="status-item" id="encoding">UTF-8</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
